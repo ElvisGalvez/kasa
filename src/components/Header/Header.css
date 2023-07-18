@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFFFFF;
+  }
+  
+  .logo-container {
+    height: 68px;
+    width: 210.32px;
+  }
+  
+  .navbar {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  .navbar a {
+    color: #FF6060;
+    text-decoration: none;
+  }
+  
+  .navbar a.active {
+    border-bottom: 1px solid #FF6060; /* Ajoutez la couleur souhaitée ici */
+}
+  

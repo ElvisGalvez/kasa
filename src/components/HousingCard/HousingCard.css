@@ -1,0 +1,22 @@
+.housing-card {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)), var(--background-image);
+  background-size: cover;
+  background-position: center;
+  margin: 30px 30px; 
+  border-radius: 10px;
+}
+
+
+.housing-card h2 {
+  position: absolute;
+  font-size: 18px;
+  bottom: 10px; /* ajusté pour ajouter du padding en bas */
+  left: 10px; /* ajusté pour ajouter du padding à gauche */
+  width: 75%; /* ajusté pour limiter la largeur du conteneur du titre */
+  color: white;
+  text-align: left; /* ajusté pour aligner le texte à gauche */
+  padding: 0px 0px 0px 5px;
+}

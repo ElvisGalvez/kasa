@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 0px 50px 0px;
     background-color: #FFFFFF;
   }
   
@@ -13,8 +13,10 @@
   
   .navbar {
     display: flex;
-    gap: 20px;
+    gap: 70px;
     list-style: none;
+    font-size: 24px;
+    font-weight: 500;
   }
   
   .navbar a {

@@ -1,16 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
 import './index.css';
-import Home from './pages/Home/';
-import Header from './components/Header/';
+import Routes from './Routes';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Header />
-      <Home />
-    </BrowserRouter>
+    <Routes />
   </React.StrictMode>
 );

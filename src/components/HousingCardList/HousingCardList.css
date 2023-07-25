@@ -1,0 +1,10 @@
+.housing-card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    background-color: #F6F6F6;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 60px auto; 
+}

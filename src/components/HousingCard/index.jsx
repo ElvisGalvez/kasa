@@ -1,14 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './HousingCard.css';
 
 const HousingCard = ({ housing }) => {
   return (
-    <div 
-      className="housing-card" 
-      style={{ '--background-image': `url(${housing.cover})` }}
-    >
-      <h2>{housing.title}</h2>
-    </div>
+    <Link to={`/housing/${housing.id}`} style={{ textDecoration: 'none' }}>
+      <div 
+        className="housing-card" 
+        style={{ '--background-image': `url(${housing.cover})` }}
+      >
+        <h2>{housing.title}</h2>
+      </div>
+    </Link>
   );
 };
 

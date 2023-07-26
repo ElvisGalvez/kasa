@@ -25,6 +25,14 @@
   }
   
   .navbar a.active {
-    border-bottom: 1px solid #FF6060; /* Ajoutez la couleur souhaitée ici */
+    position: relative;
 }
-  
+
+.navbar a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 2px; 
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid #FF6060;
+}

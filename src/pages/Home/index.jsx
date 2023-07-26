@@ -1,11 +1,15 @@
 import React from 'react';
 import Banner from '../../components/Banner';
 import HousingCardList from '../../components/HousingCardList';
+import bannerImage from '../../assets/images/mountains.png'; 
 
 function Home() {
   return (
     <div>
-      <Banner />
+      <Banner 
+        image={bannerImage} 
+        title="Chez vous, partout et ailleurs" 
+      />
       <HousingCardList />
     </div>
   );

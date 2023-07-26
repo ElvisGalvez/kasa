@@ -6,15 +6,11 @@ const Accordion = ({ title, content }) => {
 
   return (
     <div className="accordion-wrapper">
-      <button
-        className="accordion-button"
-        onClick={() => setIsOpen(!isOpen)}
-        style={{ borderRadius: isOpen ? '10px 10px 0 0' : '10px' }}
-      >
+      <button className="accordion-button" onClick={() => setIsOpen(!isOpen)}>
         {title}
         <span className="accordion-icon">
-          {isOpen ? 'ˇ' : '^'}
-        </span>
+  {isOpen ? <i className="fas fa-chevron-up"></i> : <i className="fas fa-chevron-down"></i>}
+</span>
       </button>
       {isOpen && <div className="accordion-content">{content}</div>}
     </div>

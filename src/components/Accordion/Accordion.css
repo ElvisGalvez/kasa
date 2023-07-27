@@ -34,7 +34,3 @@
 .accordion-icon {
   transition: transform 0.3s ease;
 }
-
-.accordion-button[aria-expanded='true'] .accordion-icon {
-  transform: rotate(180deg);
-}

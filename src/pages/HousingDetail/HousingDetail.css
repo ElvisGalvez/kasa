@@ -1,0 +1,102 @@
+.title-host-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.housing-title {
+    font-size: 36px;
+    color: #FF6060;
+    margin: 40px 0px 10px 0px;
+    font-weight: 500;
+}
+  
+.housing-location {
+    font-size: 18px;
+    color: #FF6060;
+    margin: 0px 0px 0px 0px;
+}
+  
+.host {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+  
+.host-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.host-name {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 20px;
+    font-size: 18px;
+    color: #FF6060;
+    line-height: 25.67px;
+}
+  
+.host-name p {
+    margin: 0; 
+}
+  
+.host-picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+  
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.tag {
+    width: 115px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: #FF6060;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+  
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+  
+.full-star {
+    color: #FF6060;
+    font-size: 24px;
+}
+  
+.empty-star {
+    color: #E3E3E3;
+    font-size: 24px;
+}
+  
+.accordion-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px 30px 0px;
+}
+
+.accordion--housePage {
+    width: 582px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.accordion--housePage:not(:last-child) {
+    margin-right: 20px;
+}

@@ -13,10 +13,10 @@
 .housing-card h2 {
   position: absolute;
   font-size: 18px;
-  bottom: 10px; /* ajusté pour ajouter du padding en bas */
-  left: 10px; /* ajusté pour ajouter du padding à gauche */
-  width: 75%; /* ajusté pour limiter la largeur du conteneur du titre */
+  bottom: 10px; 
+  left: 10px; 
+  width: 75%; 
   color: white;
-  text-align: left; /* ajusté pour aligner le texte à gauche */
+  text-align: left; 
   padding: 0px 0px 0px 5px;
 }

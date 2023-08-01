@@ -1,17 +1,27 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import housingData from '../../data/logements.json';
 import Carousel from '../../components/Carousel';
 import Accordion from '../../components/Accordion';
-import './HousingDetail.css';  
+import './HousingDetail.css';
 
 const HousingDetail = () => {
   const { id } = useParams();
-  const housing = housingData.find(housing => housing.id === id);
+  const navigate = useNavigate();
+  const [housing, setHousing] = useState();
 
-  // Gérer le cas où le logement avec l'id n'existe pas
+  useEffect(() => {
+    const foundHousing = housingData.find(housing => housing.id === id);
+    if (!foundHousing) {
+      navigate('/NotFound', { replace: true });
+    } else {
+      setHousing(foundHousing);
+    }
+  }, [id, navigate]);
+
+  // Si housing est toujours en cours de chargement, nous rendons null
   if (!housing) {
-    return <p>Logement non trouvé</p>;
+    return null;
   }
 
   const hostName = housing.host.name.split(' ');
@@ -30,7 +40,7 @@ const HousingDetail = () => {
         <div>
           <h1 className="housing-title">{housing.title}</h1>
           <p className="housing-location">{housing.location}</p>
-          
+
           <div className="tags-container">
             {housing.tags.map((tag, index) => (
               <p key={index} className="tag">{tag}</p>
@@ -55,22 +65,23 @@ const HousingDetail = () => {
       </div>
 
       <div className="accordion-container">
-    <Accordion 
-        title="Description"
-        content={housing.description}
-        customClass="accordion--housePage"
-    />
-    <Accordion 
-        title="Équipements"
-        content={housing.equipments.map((e, index) => <p key={`${e}-${index}`}>{e}</p>)}
-        customClass="accordion--housePage"
-    />
-</div>
+        <Accordion
+          title="Description"
+          content={housing.description}
+          customClass="accordion--housePage accordion--detail"
+        />
+        <Accordion
+          title="Équipements"
+          content={housing.equipments.map((e, index) => <p key={`${e}-${index}`}>{e}</p>)}
+          customClass="accordion--housePage accordion--detail"
+        />
+
+      </div>
 
 
 
-        </div>
-      
+    </div>
+
   );
 };
 

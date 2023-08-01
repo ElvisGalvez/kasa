@@ -56,7 +56,7 @@
 }
   
 .tag {
-    width: 115px;
+    min-width: 115px;
     height: 25px;
     border-radius: 10px;
     background-color: #FF6060;
@@ -67,7 +67,9 @@
     margin-right: 20px;
     margin-bottom: 20px;
     font-size: 14px;
+    padding: 0 10px;
 }
+
   
 .rating {
     display: flex;
@@ -99,4 +101,112 @@
 
 .accordion--housePage:not(:last-child) {
     margin-right: 20px;
+}
+
+.accordion--detail .accordion-button {
+    font-size: 18px;
+  }
+  
+  .accordion--detail .accordion-button .accordion-icon {
+    font-size: 24px; /* rétabli la taille originale des icônes */
+  }
+  
+  .accordion--detail .accordion-content {
+    font-size: 18px;
+  }
+
+  .accordion--detail .accordion-content p {
+    margin: 5px;
+  }
+  
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+    .title-host-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .housing-title, .tags-container {
+      order: -1;
+    }
+  
+    .host-container {
+      order: 1;
+      flex-direction: row;
+      align-items: center; 
+      justify-content: space-between;
+      width: 100%;
+      margin: 0px 0px 20px 0px; 
+    }
+  
+    .rating {
+      order: -1;
+      margin: 0px;
+    }
+  
+    .host {
+      flex-direction: row; 
+      align-items: center;
+      width: auto;
+      margin: 0px;
+    }
+  
+    .host-name {
+      order: 1; /* la photo de profil est à gauche */
+      margin-right: 10px;
+      margin-left: 20px;
+      text-align: left;
+      font-size: 12px;
+      line-height: 17.11px;
+    }
+  
+    .host-picture {
+      order: 2; /* le nom de l'hôte est à droite */
+      width: 32px;
+      height: 32px;
+    }
+  
+    .housing-title {
+      margin: 20px 0px 10px 0px;
+      font-size: 18px;
+      width: 70%;
+    }
+  
+    .housing-location {
+      font-size: 14px;
+    }
+  
+    .tag {
+      min-width: 84px;
+      height: 18px;
+      font-size: 10px;
+    }
+  
+    .full-star, .empty-star {
+      font-size: 13px; 
+    }
+  
+    .accordion--housePage {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px; 
+    }
+
+    
+  .accordion-container {
+    flex-direction: column;
+  }
+
+  .accordion--detail .accordion-button {
+    font-size: 13px;
+  }
+
+  .accordion--detail .accordion-button .accordion-icon {
+    font-size: 16px;
+  }
+  .accordion--detail .accordion-content {
+    font-size: 12px;
+    padding: 20px 0px 10px 5px;
+  }
 }

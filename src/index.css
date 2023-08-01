@@ -3,13 +3,25 @@
 }
 
 body {
-  margin: 0 60px;
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+.content { /*via Routes, applique des marges au site, sauf au footer*/
+  margin: 0 60px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+  .content {
+    margin: 0 20px;
+  }
 }

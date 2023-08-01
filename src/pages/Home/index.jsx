@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../../components/Banner';
 import HousingCardList from '../../components/HousingCardList';
-import bannerImage from '../../assets/images/mountains.png'; 
+import bannerImage from '../../assets/images/landscape.png'; 
 
 function Home() {
   return (

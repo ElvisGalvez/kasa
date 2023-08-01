@@ -5,9 +5,10 @@
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0)), var(--background-image);
   background-size: cover;
   background-position: center;
-  margin: 30px 30px; 
+  margin: 20px;
   border-radius: 10px;
 }
+
 
 
 .housing-card h2 {
@@ -19,4 +20,16 @@
   color: white;
   text-align: left; 
   padding: 0px 0px 0px 5px;
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+  .housing-card {
+    width: 335px;
+    height: 255px;
+  }
+
+  .housing-card h2 {
+    font-size: 18px;
+  }
 }

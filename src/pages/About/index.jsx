@@ -25,7 +25,7 @@ const data = [
 const About = () => {
   return (
     <div>
-      <Banner image={mountainImage} />
+      <Banner image={mountainImage} isAboutPage={true} />
       {data.map((item, index) => (
         <Accordion key={index} title={item.title} content={item.content} />
       ))}

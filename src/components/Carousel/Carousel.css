@@ -38,3 +38,23 @@
   color: #ffffff;  
   font-size: 18px;
 }
+
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+  .carousel-container {
+    height: 255px;
+  }
+
+  .carousel-button {
+    font-size: 20px; 
+  }
+
+  .carousel-image {
+    width: 100%;
+  }
+
+  .carousel-position {
+    display: none;
+  }
+}

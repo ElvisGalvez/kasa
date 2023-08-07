@@ -8,7 +8,8 @@ function Home() {
     <div>
       <Banner 
         image={bannerImage} 
-        title="Chez vous, partout et ailleurs" 
+        title="Chez vous, partout et ailleurs"
+        isHomePage={true} 
       />
       <HousingCardList />
     </div>

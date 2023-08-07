@@ -6,9 +6,18 @@ import './Header.css';
 const Header = () => {
   const location = useLocation();
 
+  let headerClass = 'header';
+  if (location.pathname === '/') {
+    headerClass += ' header-home';
+  } else if (location.pathname.startsWith('/housing')) {
+    headerClass += ' header-housing';
+  } else if (location.pathname === '/about') {
+    headerClass += ' header-about';
+  }
+
   return (
-    <header className="header">
-      <Logo />
+    <header className={headerClass}>
+      <Logo styleClass="logo-container-header" />
       <nav>
         <ul className="navbar">
           <li>

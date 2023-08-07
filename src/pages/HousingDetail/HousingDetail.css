@@ -181,6 +181,7 @@
       min-width: 84px;
       height: 18px;
       font-size: 10px;
+      margin-right: 10px;
     }
   
     .full-star, .empty-star {

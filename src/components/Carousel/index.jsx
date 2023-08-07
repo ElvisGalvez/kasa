@@ -2,14 +2,20 @@ import React, { useState } from "react";
 import "./Carousel.css";
 
 const Carousel = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);  
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [prevIndex, setPrevIndex] = useState(images.length - 1);
+  const [nextIndex, setNextIndex] = useState(1);
 
   const nextImage = () => {
-    setCurrentIndex((currentIndex + 1) % images.length);  
+    setPrevIndex(currentIndex);
+    setCurrentIndex(nextIndex);
+    setNextIndex((nextIndex + 1) % images.length);
   };
 
   const prevImage = () => {
-    setCurrentIndex((currentIndex - 1 + images.length) % images.length);  
+    setNextIndex(currentIndex);
+    setCurrentIndex(prevIndex);
+    setPrevIndex((prevIndex - 1 + images.length) % images.length);
   };
 
   return (
@@ -19,7 +25,18 @@ const Carousel = ({ images }) => {
           <i className="fas fa-chevron-left"></i>
         </button>
       )}
-      <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="carousel-image" />
+      {images.map((image, index) => (
+        <img 
+          src={image} 
+          alt={`Slide ${index + 1}`}
+          className={`
+            carousel-image 
+            ${index === currentIndex ? 'active' : ''}
+            ${index === prevIndex ? 'prev' : ''}
+            ${index === nextIndex ? 'next' : ''}
+          `} 
+        />
+      ))}
       {images.length > 1 && (
         <button onClick={nextImage} className="carousel-button next" aria-label="Next slide">
           <i className="fas fa-chevron-right"></i>
@@ -35,3 +52,4 @@ const Carousel = ({ images }) => {
 };
 
 export default Carousel;
+

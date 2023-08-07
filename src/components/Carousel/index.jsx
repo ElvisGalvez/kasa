@@ -27,6 +27,7 @@ const Carousel = ({ images }) => {
       )}
       {images.map((image, index) => (
         <img 
+        key={index}
           src={image} 
           alt={`Slide ${index + 1}`}
           className={`

@@ -86,6 +86,11 @@
     font-size: 12px; 
     gap: 20px; 
   }
+
+  .navbar a {
+    text-transform: uppercase; /* Addition of this line to set the text to uppercase */
+  }
+
   .navbar a.active::after {
     border-bottom: 1px solid #FF6060;
     bottom: -1px;
